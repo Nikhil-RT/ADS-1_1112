@@ -11,6 +11,7 @@ class mergeArray{
         int j = 0;
         int k = 0;
         int x;
+        
        while (i < n1 && j < n2) {
             if (a1[i] < a2[j]) {
             merge[k++] = a1[i++];
