@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - threeSum",
+            "request": "launch",
+            "mainClass": "threeSum",
+            "projectName": "ADS-1_1112_6144263d"
+        }
+    ]
+}
