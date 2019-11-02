@@ -19,11 +19,11 @@ class mergeArray{
             merge[k++] = a2[j++];
             }
         }
-    while (i < n1){
+    while (i < n1) {
         merge[k++] = a1[i++];
-    }while (j < n2){
+    }while (j < n2) {
         merge[k++] = a2[j++];
-    }for (x = 0; x < n1 + n2; x++){
+    }for (x = 0; x < n1 + n2; x++) {
         System.out.println(merge[x]);
     }
     }    

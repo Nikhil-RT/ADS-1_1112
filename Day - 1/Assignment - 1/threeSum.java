@@ -2,7 +2,7 @@ import java.util.Arrays;
 
 public class threeSum {
     public static void main(String[] args) {
-        int [] a = {20,-1,-19,-16,4,12};
+        int [] a = {1,2,-3,-10,6,4};
         int N = a.length;
         Arrays.sort(a);
         int count = 0;
