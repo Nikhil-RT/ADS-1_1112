@@ -2,10 +2,10 @@ import java.util.*;
 class Solution {
 	public int[] sortInsertion(int[] arr){
 		int temp,j;
-		for(int i=1; i<arr.length;i++) {
-			j=i-1;
+		for(int i = 1; i < arr.length; i++) {
+			j = i-1;
 			temp = arr[i];
-			while(j>=0 && arr[j]>temp) {
+			while(j >= 0 && arr[j] > temp) {
 				arr[j+1] = arr[j];
 				j = j-1;
 			}
@@ -15,16 +15,16 @@ class Solution {
 	}
 	public int[] sortSelection(int[] arr){
 		// fill you code Here
-		for(int i=0; i<arr.length-1;i++) {
+		for(int i = 0; i < arr.length-1; i++) {
 			int min = i;
-			for(int j = i+1; j<arr.length;j++) {
-				if(arr[j]<arr[min]) {
+			for(int j = i+1; j < arr.length; j++) {
+				if(arr[j] < arr[min]) {
 					min = j;
 				}
 			}
 			int temp = arr[i];
-			arr[i]=arr[min];
-			arr[min]=temp;
+			arr[i] = arr[min];
+			arr[min] = temp;
 		}
 		return arr;
 	}

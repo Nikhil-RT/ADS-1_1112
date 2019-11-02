@@ -1,22 +1,22 @@
 class Solution{
-	public Team[] sort(Team[] teams){
+	public Team[] sort(Team[] teams) {
 		// your code goes here
 		for(int i=0; i<teams.length-1;i++) {
 			int min = i;
-			for(int j = i+1; j<teams.length;j++) {
-				if(teams[j].compareTo(teams[min])==1) {
+			for(int j = i+1; j < teams.length; j++) {
+				if(teams[j].compareTo(teams[min]) == 1) {
 					min = j;
 				}
 			}
 			Team temp = teams[i];
-			teams[i]=teams[min];
-			teams[min]=temp;
+			teams[i] = teams[min];
+			teams[min] = temp;
 		}
 
 		return teams;
 	}
 }
-class Team implements Comparable<Team> {
+class Team implements Comparable <Team> {
 	String teamName;
 	int noOfWins;
 	int noOfLosses;
@@ -27,7 +27,7 @@ class Team implements Comparable<Team> {
 		noOfWins = wins;
 		noOfLosses = losses;
 	}
-	public String toString(){
+	public String toString() {
 		//retrun all the attributes as a string but appending with ", "
         return "";
 	}
