@@ -1,9 +1,9 @@
 class Solution{
 	public Team[] sort(Team[] teams) {
 		// your code goes here
-		for(int i=0; i<teams.length-1;i++) {
+		for(int i = 0; i < teams.length-1; i++) {
 			int min = i;
-			for(int j = i+1; j < teams.length; j++) {
+			for(int j = i + 1; j < teams.length; j++) {
 				if(teams[j].compareTo(teams[min]) == 1) {
 					min = j;
 				}
@@ -12,7 +12,6 @@ class Solution{
 			teams[i] = teams[min];
 			teams[min] = temp;
 		}
-
 		return teams;
 	}
 }
@@ -28,7 +27,7 @@ class Team implements Comparable <Team> {
 		noOfLosses = losses;
 	}
 	public String toString() {
-		//retrun all the attributes as a string but appending with ", "
+		//returns all the attributes as a string but appending with ","
         return "";
 	}
 	public int compareTo(Team team) {

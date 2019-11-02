@@ -22,3 +22,5 @@ Sort the teams in descending order based on the attribute Wins. If two teams hav
 
 
 You were given a Solution class and Team class, Solution class contains sort method which accepts a team array as parameter. Sort the team array based on the above sorting criteria and return a sorted team array.
+
+Output : Australia, India, SouthAfrica, England, Zimbabwe, Bangladesh, Ireland.  
