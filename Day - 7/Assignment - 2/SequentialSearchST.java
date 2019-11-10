@@ -1,9 +1,8 @@
 import java.util.Iterator;
-
 // import java.util.LinkedList;
 class SequentialSearchST<Key extends Comparable <Key>,Value > {
     //It stores keys and their values
-    private LinkedList list = new LinkedList();
+    private MyLinkedList list = new MyLinkedList();
 
     //It adds key and value pair to the list in linked list
     public void put(Key key, Value value) {

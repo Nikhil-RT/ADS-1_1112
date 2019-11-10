@@ -1,8 +1,7 @@
-public class LinkedList<Key extends Comparable<Key>, Value> {
+public class MyLinkedList<Key extends Comparable<Key>, Value> {
     Node head;
-
    // Constructs an empty list with size initialized to zero.
-   public LinkedList() {
+   public MyLinkedList() {
         head = null;
     }
    // Appends the specified element to the end of this list.
@@ -11,7 +10,6 @@ public class LinkedList<Key extends Comparable<Key>, Value> {
             head = new Node(key, value);
             return;
         }
-
         Node current = head;
         while (current.next != null) {
             if ((current.key.equals(key))) {
@@ -24,17 +22,14 @@ public class LinkedList<Key extends Comparable<Key>, Value> {
         temp.next = head;
         head = temp;
     }
-
     // Removes all of the elements from this list.
     public void clear() {
         head = null;
     }
-
     // Returns boolean if this list contains the specified element.
     public Node contains(Key key) {
         Node current = head;
         Node temp = null;
-        
         while (current.next != null) {
 
             if (current.next.key.compareTo(key) == 0) {
