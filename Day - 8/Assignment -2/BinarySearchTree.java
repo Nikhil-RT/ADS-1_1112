@@ -9,6 +9,7 @@ class BinarySearchT<Key extends Comparable <Key>, Value>{
     /** Keys and values are comparable
      */
     BinarySearchT (int size){
+
         keys = (Key[]) new Comparable[size];
         values = (Value[]) new Object[size];
         left  = new int[size];
@@ -43,7 +44,7 @@ class BinarySearchT<Key extends Comparable <Key>, Value>{
         if(key == null || value == null) throw new IllegalArgumentException();
 
         if(size()== keys.length){
-            System.out.println("Size has reached the limit");
+            System.out.println("Size is full");
          return ;
         }
         put(0,key,value);
@@ -87,7 +88,7 @@ class BinarySearchT<Key extends Comparable <Key>, Value>{
      * is achieved by using compareTo() method so that checks only the left / right array.
      */
     public Value get(int index,Key key){
-            if(key == null) throw new IllegalArgumentException("calls get() with a null key");
+            if(key == null) throw new IllegalArgumentException("call get() with a null key");
         if(index == -1){
             return null;
         }
