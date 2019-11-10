@@ -121,6 +121,6 @@ class BinarySearchTree {
 			BST.put("i",0);
 			BST.put("l",0);	
 			System.out.println(BST.toString());
-			System.out.println(BST.get("L"));
+			System.out.println(BST.get("l"));
     }
 }
