@@ -1,3 +1,5 @@
+import javax.swing.text.Position;
+
 public class RansomNote {
 
     /**
@@ -27,19 +29,19 @@ public class RansomNote {
     public void put(final String key) {
         int pos = Math.abs(key.hashCode()) % pair.length;
 
-        while (pair[pos] != null) {
-            if (pair[pos].key().compareTo(key) == 0) {
-                pair[pos].incValue();
+        while (pair[Position] != null) {
+            if (pair[position].key().compareTo(key) == 0) {
+                pair[position].incValue();
                 return;
             } else {
-                if (pos == pair.length - 1) {
-                    pos = 0;
+                if (position == pair.length - 1) {
+                    position = 0;
                 } else {
-                    pos += 1;
+                    position += 1;
                 }
             }
         }
-        pair[pos] = new Pair(key, 1);
+        pair[position] = new Pair(key, 1);
     }
 
     /**
@@ -51,14 +53,14 @@ public class RansomNote {
     public Integer get(final String key) {
         int pos = Math.abs(key.hashCode()) % pair.length;
 
-        while (pair[pos] != null) {
-            if (pair[pos].key().compareTo(key) == 0) {
-                return pair[pos].value();
+        while (pair[position] != null) {
+            if (pair[position].key().compareTo(key) == 0) {
+                return pair[position].value();
             } else {
-                if (pos == pair.length - 1) {
-                    pos = 0;
+                if (position == pair.length - 1) {
+                    position = 0;
                 } else {
-                    pos += 1;
+                    position += 1;
                 }
             }
         }
@@ -69,13 +71,13 @@ public class RansomNote {
      * function to display all the key value pairs in the array.
      */
     public void display() {
-        int pos = 0;
+        int position = 0;
 
-        while (pos < pair.length) {
-            if (pair[pos] != null) {
-                System.out.println(pair[pos].key() + " " + pair[pos].value());
+        while (position < pair.length) {
+            if (pair[position] != null) {
+                System.out.println(pair[position].key() + " " + pair[position].value());
             }
-            pos += 1;
+            position += 1;
         }
     }
 
@@ -95,15 +97,15 @@ public class RansomNote {
      * @return 'True' if the letter can be written, else 'False'.
      */
     public String check(final RansomNote that) {
-        int pos = 0;
-        while (pos < that.pair().length) {
-            if (that.pair()[pos] != null) {
-                if (that.get(that.pair()[pos].key())
-                            > this.get(that.pair()[pos].key())) {
+        int position = 0;
+        while (position < that.pair().length) {
+            if (that.pair()[position] != null) {
+                if (that.get(that.pair()[position].key())
+                            > this.get(that.pair()[position].key())) {
                     return "False";
                 }
             }
-            pos += 1;
+            position += 1;
         }
         return "True";
     }

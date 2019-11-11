@@ -7,27 +7,27 @@ class Solution{
 		return arr;
 	}
 	public static void sort(int[] arr, int lo, int hi) {
-		if (hi <= lo) {
+		if (high <= low) {
 			return;
 		}
 		int j = partition(arr, lo, hi);
-		sort(arr, lo, j - 1);
-		sort(arr, j + 1, hi);
+		sort(arr, low, j - 1);
+		sort(arr, j + 1, high);
 	}
 	// function to divide the function based on the pivot position.
 
-	public static int partition(int[] arr, int lo, int hi) {
-		int i = lo;
-		int j = hi + 1;
+	public static int partition(int[] arr, int low, int high) {
+		int i = low;
+		int j = high + 1;
 
 		while (true) {
-			while (arr[++i] < arr[lo]) {
-				if (i == hi) {
+			while (arr[++i] < arr[low]) {
+				if (i == high) {
 					break;
 				}
 			}
-			while (arr[lo] < arr[--j]) {
-				if (j == lo) {
+			while (arr[low] < arr[--j]) {
+				if (j == low) {
 					break;
 				}
 			}
