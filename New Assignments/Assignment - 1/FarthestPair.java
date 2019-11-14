@@ -26,7 +26,7 @@ class FarthestPair{
             i++;
         }
         //Printing Min and Max in a pair
-        System.out.println("("+ Min +","+ Max + ")");
+        System.out.println("(" + Min + "," + Max + ")");
 
     }
 }
