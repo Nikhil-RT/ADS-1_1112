@@ -15,18 +15,18 @@ class FarthestPair{
         System.out.println("Enter No. of values: ");
         int number = scan.nextInt();
         // We do try & catch operations for errors
-        do{
-        try{    
-        if(number < 0) {
-            throw new InputMismatchException();
+        while(number < 0){
+            try{    
+                if(number < 0) {
+                    throw new InputMismatchException();
+                }
+            }
+            catch(InputMismatchException exception) {
+                System.out.println("Enter the Input again");
+                //Again call for input
+                number = scan.nextInt();
+            }
         }
-        }
-        catch(InputMismatchException exception) {
-            System.out.println("Enter the Input again");
-            //Again call for input
-            number = scan.nextInt();
-        }
-        }while(false);
         double[] a = new double[number];
         
         // Let's take an Double Array
