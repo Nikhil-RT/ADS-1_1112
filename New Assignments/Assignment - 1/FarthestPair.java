@@ -1,3 +1,4 @@
+import java.util.Scanner;
 /**
  * Write a program that, given an array a[] of N double values, 
  * finds a farthest pair : 
@@ -8,16 +9,27 @@
  */
 class FarthestPair{
     public static void main(String[] args) {
+
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Enter No. of values: ");
+
+        int number = scan.nextInt();
+        double[] a = new double[number];
+        
         // Let's take an Double Array
-        double a[] = {5.0, 7.0, 2.0, 4.0, 3.0}; 
+        // double a[] = {5.0, 7.0, 2.0, 4.0, 3.0}; 
         int i = 0;
+        //Iterating using While loop
+        for (int j = 0; j < a.length; j++) {
+            a[j] = scan.nextDouble();
+        }
         double Min = a[0];
         double Max = a[0];
-        //Iterating using While loop
         while (i < a.length) { 
             //Finding Min
             if(a[i] < Min) {
                Min = a[i];
+               System.out.println(a[i]);
             }
             //Finding Max
             if (a[i] > Max) {
@@ -25,8 +37,11 @@ class FarthestPair{
             }
             i++;
         }
+        scan.close();
         //Printing Min and Max in a pair
         System.out.println("(" + Min + "," + Max + ")");
+        // System.out.println();
+
 
     }
 }
