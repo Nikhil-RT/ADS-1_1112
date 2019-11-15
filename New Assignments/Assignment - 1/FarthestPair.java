@@ -16,7 +16,7 @@ class FarthestPair{
         int number = scan.nextInt();
         // We do try & catch operations for errors
         while(number < 0){
-            try{    
+            try{
                 if(number < 0) {
                     throw new InputMismatchException();
                 }
@@ -28,7 +28,6 @@ class FarthestPair{
             }
         }
         double[] a = new double[number];
-        
         // Let's take an Double Array
         // double a[] = {5.0, 7.0, 2.0, 4.0, 3.0}; 
         int i = 0;
@@ -54,7 +53,5 @@ class FarthestPair{
         scan.close();
         //Printing Min and Max in a pair
         System.out.println("(" + Min + "," + Max + ")");
-        // System.out.println();
-
     }
 }
