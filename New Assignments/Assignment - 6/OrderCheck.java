@@ -161,6 +161,7 @@ public class OrderCheck {
             }
           
         }
+        
         System.out.println("Min : " + (OrderedCheck.min()));
         System.out.println("Max : " + (OrderedCheck.max()));
         System.out.println(OrderedCheck.isOrdered());
