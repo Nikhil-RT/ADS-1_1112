@@ -1,4 +1,6 @@
+import java.util.Scanner;
 import java.util.Stack;
+// import java.util.scanner;
 
 class Paranthesis {
 
@@ -31,11 +33,15 @@ class Paranthesis {
                 }
 
             }
-            return "Matching";
+            return "Matching";  
     }
 
     public static void main(String[] args) {
-        String str = "[(])";
-        System.out.println(Solution(str));
+        // String str = "[(])";
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Enter a String : ");
+        String str = scan.nextLine();
+        scan.close();
+        System.out.println("The Given String is " + Solution(str));
     }
 }
