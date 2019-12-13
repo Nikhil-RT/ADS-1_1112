@@ -29,9 +29,9 @@ class Paranthesis {
                         return "Not-Matching";
                     }
                 }
-                
+
             }
-            return "Matching";  
+            return "Matching";
     }
 
     public static void main(String[] args) {
