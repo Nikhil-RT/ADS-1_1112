@@ -3,21 +3,24 @@ import java.util.*;
 public class SS {
 
 	//Selection Sort -
-	public static void sort(int []a) {
-
+	public static void sort(int []a, int i, int j) {
+		// int i;
+		// int j;
 		int N = a.length;
 
-		for (int i = 0; i < N; i++) {
+		for (i = 0; i < N; i++) {
 			int min = i;
 
-			for (int j = i + 1; j < N; j++) {
+			for (j = i + 1; j < N; j++) {
 				if (a[j] < a[min]) {
 					min = j;
 				}
 			}
-			int swap = a[i];
+			int temp = a[i];
 			a[i] = a[j];
-			a[j] = swap;
+			a[j] = temp;
 		}
 	}
+
+
 }
