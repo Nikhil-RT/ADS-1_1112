@@ -2,13 +2,17 @@ import java.util.*;
 
 public class MaxPQ {
     static int[] pq;
-    int n = 1;  
+    int n = 0;  
     int min;
     int key;
 
     public MaxPQ(){
         MaxPQ.pq = new int[10];
         min = Integer.MAX_VALUE;
+    }
+
+    public int size() {
+        return n;
     }
 
     public boolean isempty() {
@@ -22,7 +26,7 @@ public class MaxPQ {
     }
 
     public void swim(int k) {
-        while(k > 1 && (k/2 > k)) {
+        while(k > 1 && (pq[k/2] < pq[k])) {
             exchange(k,k/2);
             k = k/2;
         }
@@ -31,7 +35,7 @@ public class MaxPQ {
     public void sink(int k) {
         while (2*k <= n) {
             int j = 2*k;
-            if (j > 1 && (j < j+1) ){
+            if (j < n && (pq[j] < pq[j+1]) ){
                 j++;
             }
             if (!(k < j)) break;
@@ -42,8 +46,7 @@ public class MaxPQ {
 
     public void insert(int key) {
         if (min > key) min = key;
-        pq[n] = key;
-        n++;
+        pq[++n] = key;
         swim(n);
     }
 
@@ -87,7 +90,6 @@ public class MaxPQ {
         System.out.println("==================================");
         System.out.println("Modified PQ - Array : " + Arrays.toString(pq));
         System.out.println("==================================");
-        System.out.println("Minimum Element : " + obj.min());
     }
 
 }
