@@ -2,6 +2,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - SingleLinkedList",
+            "request": "launch",
+            "mainClass": "SingleLinkedList",
+            "projectName": "ADS-1_1112_5f90e402"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - conditonal",
+            "request": "launch",
+            "mainClass": "conditonal",
+            "projectName": "ADS-1_1112_5f90e402"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - threeSum",
             "request": "launch",
             "mainClass": "threeSum",
