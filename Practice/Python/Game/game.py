@@ -26,10 +26,10 @@ class Person:
     def damage(self):
         return random.randrange(self.atkl,self.atkh)
 
-    def spell_damage(self,i):
-        mgl = self.magic[i]["dmg"] - 5
-        mgh = self.magic[i]["dmg"] + 5
-        return random.randrange(mgl,mgh)
+    # def spell_damage(self,i):
+    #     mgl = self.magic[i]["dmg"] - 5
+    #     mgh = self.magic[i]["dmg"] + 5
+    #     return random.randrange(mgl,mgh)
 
     def take_damage(self,dmg):
         self.hp = self.hp - dmg
@@ -57,11 +57,11 @@ class Person:
     def reduce_mp(self,cost):
         self.mp = self.mp - cost
 
-    def get_spell_name(self,i):
-        return self.magic[i]["name"]
+    # def get_spell_name(self,i):
+    #     return self.magic[i]["name"]
 
-    def get_spell_mp_cost(self,i):
-        return self.magic[i]["cost"]
+    # def get_spell_mp_cost(self,i):
+    #     return self.magic[i]["cost"]
 
     def choose_action(self):
         i = 1
