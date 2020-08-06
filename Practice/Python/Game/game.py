@@ -1,7 +1,4 @@
 import random
-# from Game.magic import Spell
-# import pprint
-
 
 class bcolors:
     HEADER = '\033[95m'
@@ -96,15 +93,24 @@ class Person:
         hp_bar = ""
         bar_fill = (self.hp/self.maxhp) * 100 / 4
 
-        while bar_fill >= 0:
+        mp_bar = ""
+        mpbar_fill = (self.mp/self.maxmp) * 100 / 10
+
+        while bar_fill > 0:
             hp_bar += "█"
             bar_fill = bar_fill - 1
+
+        while mpbar_fill > 0:
+            mp_bar += "█"
+            mpbar_fill = mpbar_fill - 1
 
         while len(hp_bar) < 25:
             hp_bar += " "
 
+        while len(mpbar_fill) < 10:
+            mp_bar += " "
 
-        print("                 _________________________              __________")
+        print("                 __________________________              __________")
         print(bcolors.BOLD + str(self.name)+"    "+ str(self.hp) + "/" + str(self.maxhp) + " |" + bcolors.OKGREEN + hp_bar + bcolors.ENDC + bcolors.BOLD
             +"|    "+ str(self.mp) +"/" + str(self.maxmp) +" |" + bcolors.OKBLUE + "██████████"+bcolors.ENDC+"|"+"\n")
 
