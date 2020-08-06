@@ -112,6 +112,6 @@ class Person:
 
         print("                 __________________________              __________")
         print(bcolors.BOLD + str(self.name)+"    "+ str(self.hp) + "/" + str(self.maxhp) + " |" + bcolors.OKGREEN + hp_bar + bcolors.ENDC + bcolors.BOLD
-            +"|    "+ str(self.mp) +"/" + str(self.maxmp) +" |" + bcolors.OKBLUE + "██████████"+bcolors.ENDC+"|"+"\n")
+            +"|    "+ str(self.mp) +"/" + str(self.maxmp) +" |" + bcolors.OKBLUE + mp_bar + bcolors.ENDC+"|"+"\n")
 
 
