@@ -97,7 +97,7 @@ class Person:
         bar_fill = (self.hp/self.maxhp)*100 / 4
 
         while bar_fill > 0:
-            bar += "+"
+            hp_bar += "+"
             bar_fill -= 1
 
         while len(hp_bar) < 25:
