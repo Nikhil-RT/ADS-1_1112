@@ -94,11 +94,11 @@ class Person:
 
     def get_stats(self):
         hp_bar = ""
-        bar_fill = (self.hp/self.maxhp)*100 / 4
+        bar_fill = (self.hp/self.maxhp) * 100 / 4
 
         while bar_fill > 0:
             hp_bar += "█"
-            bar_fill -= 1
+            bar_fill = bar_fill - 1
 
         while len(hp_bar) < 25:
             hp_bar += " "
