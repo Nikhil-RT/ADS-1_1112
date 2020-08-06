@@ -95,7 +95,7 @@ class Person:
     def get_enemy_stats(self):
         
         hp_bar= ""
-        bar_fill = (self.hp/self.maxhp) * 100 / 2
+        bar_fill = (self.hp / self.maxhp) * 100 / 2
 
         while bar_fill > 0:
             hp_bar = "█"
@@ -120,7 +120,7 @@ class Person:
             current_hp = hp_string
 
         print("                   __________________________________________________")
-        print(bcolors.BOLD + str(self.name) + "    " + current_hp + " |" + bcolors.OKGREEN + hp_bar + bcolors.ENDC + "|")
+        print(bcolors.BOLD + str(self.name) + "    " + current_hp + " |" + bcolors.FAIL + hp_bar + bcolors.ENDC + "|")
 
 
 
