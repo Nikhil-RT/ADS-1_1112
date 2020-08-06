@@ -93,6 +93,7 @@ class Person:
 
 
     def get_enemy_stats(self):
+        
         hp_bar= ""
         bar_fill = (self.hp/self.maxhp) * 100 / 2
 
