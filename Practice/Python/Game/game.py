@@ -95,11 +95,11 @@ class Person:
     def get_enemy_stats(self):
         
         hp_bar= ""
-        bar_fill = (self.hp / self.maxhp) * 100 / 2
+        bar_ticks = (self.hp / self.maxhp) * 100 / 2
 
-        while bar_fill > 0:
+        while bar_ticks > 0:
             hp_bar = "█"
-            bar_fill = bar_fill - 1
+            bar_ticks = bar_ticks - 1
 
         while len(hp_bar) < 50:
             hp_bar += " "
