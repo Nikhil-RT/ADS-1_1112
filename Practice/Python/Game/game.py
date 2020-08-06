@@ -110,7 +110,7 @@ class Person:
         while len(mp_bar) < 10:
             mp_bar += " "
 
-        print("                 __________________________              __________")
+        print("                 _________________________              __________")
         print(bcolors.BOLD + str(self.name)+"    "+ str(self.hp) + "/" + str(self.maxhp) + " |" + bcolors.OKGREEN + hp_bar + bcolors.ENDC + bcolors.BOLD
             +"|    "+ str(self.mp) +"/" + str(self.maxmp) +" |" + bcolors.OKBLUE + mp_bar + bcolors.ENDC+"|"+"\n")
 
