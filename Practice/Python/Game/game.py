@@ -106,8 +106,8 @@ class Person:
         hp_string = str(self.hp) + "/" + str(self.maxhp)
         current_hp = ""
 
-        if len(hp_string) < 9:
-            decreased = 9 - len(hp_string)
+        if len(hp_string) < 11:
+            decreased = 11 - len(hp_string)
 
             while decreased > 0:
                 current_hp += " "
@@ -118,7 +118,7 @@ class Person:
         else:
             current_hp = hp_string
 
-        print("                 _________________________")
+        print("                 ___________________________________")
         print(bcolors.BOLD + str(self.name)+"    "+ current_hp + " |" + bcolors.OKGREEN + hp_bar + bcolors.ENDC + "\n")
 
 
