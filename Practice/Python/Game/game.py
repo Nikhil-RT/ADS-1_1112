@@ -118,7 +118,7 @@ class Person:
         else:
             current_hp = hp_string
 
-        print("                   ____________________________________________________")
+        print("                   __________________________________________________")
         print(bcolors.BOLD + str(self.name)+"    "+ current_hp + " |" + bcolors.OKGREEN + hp_bar + bcolors.ENDC +"|" +"\n")
 
 
