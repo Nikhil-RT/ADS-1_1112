@@ -91,6 +91,12 @@ class Person:
             print("    " + str(i) + ".", item["item"].name + ":", item["item"].description, " (x" + str(item["quantity"]) +")")
             i += 1
 
+    def choose_enemy(self,enemies):
+        i = 1
+        print("\n" + bcolors.FAIL + bcolors.BOLD + "    Target:" + bcolors.ENDC)
+        for enemy in enemies:
+            print("    "+ str(i) + ".", enemy.name)
+            i += 1
 
     def get_enemy_stats(self):
         
