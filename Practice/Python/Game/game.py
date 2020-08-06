@@ -100,7 +100,7 @@ class Person:
             hp_bar += "█"
             bar_fill -= 1
 
-        while len(hp_bar) < 25:
+        while len(hp_bar) < 2:
             hp_bar += " "
 
 
