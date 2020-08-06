@@ -74,6 +74,7 @@ class Person:
             print("    " + str(i) + ".", action)
             i += 1
 
+
     def choose_magic(self):
         i = 1
         # print("\n"+"Magic")
@@ -82,12 +83,29 @@ class Person:
             print("    " + str(i) + ".", spell.name, "(cost:", str(spell.cost) + ")")
             i += 1
 
+
     def choose_item(self):
         i = 1
         print("\n" + bcolors.OKBLUE + bcolors.BOLD + "ITEMS:" + bcolors.ENDC)
         for item in self.items:
             print("    " + str(i) + ".", item["item"].name + ":", item["item"].description, " (x" + str(item["quantity"]) +")")
             i += 1
+
+
+    def enemy_stats(self):
+        hp_bar= ""
+        bar_fill = (self.hp/self.maxhp) * 100 / 2
+
+        while bar_fill > 0:
+            hp_bar = "█"
+            bar_fill = bar_fill - 1
+
+        while len(hp_bar) < 50:
+            hp_bar += " "
+        print("                 _________________________              __________")
+        print(bcolors.BOLD + str(self.name)+"    "+ current_hp + " |" + bcolors.OKGREEN + hp_bar + bcolors.ENDC + "\n")
+
+
 
     def get_stats(self):
         hp_bar = ""
