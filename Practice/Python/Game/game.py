@@ -94,7 +94,7 @@ class Person:
         bar_fill = (self.hp/self.maxhp) * 100 / 4
 
         mp_bar = ""
-        mpbar_fill = (self.mp/self.maxmp) * 100 // 10
+        mpbar_fill = (self.mp/self.maxmp) * 100 / 10
 
         while bar_fill > 0:
             hp_bar += "█"
@@ -107,7 +107,7 @@ class Person:
         while len(hp_bar) < 25:
             hp_bar += " "
 
-        while len(mpbar_fill) < 10:
+        while len(mp_bar) < 10:
             mp_bar += " "
 
         print("                 __________________________              __________")
