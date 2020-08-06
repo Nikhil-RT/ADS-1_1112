@@ -91,6 +91,9 @@ class Person:
             print("    " + str(i) + ".", item["item"].name + ":", item["item"].description, " (x" + str(item["quantity"]) +")")
             i += 1
 
-
+    def get_stats(self):
+        print("                  ___________________            _________________")
+        print(bcolors.BOLD+"Valos:    "+ "200/460 |" + bcolors.OKGREEN + "++++++++++++++" + bcolors.ENDC + bcolors.BOLD
+            +"     |    "+"65/65 |" + bcolors.OKBLUE + "++++++++"+bcolors.ENDC+"         |"+"\n")
 
 
