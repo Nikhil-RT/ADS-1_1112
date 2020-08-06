@@ -98,6 +98,9 @@ class Person:
             print("    "+ str(i) + ".", enemy.name)
             i += 1
 
+        choice = int(input("Choose a target:")) - 1
+        return choice
+
     def get_enemy_stats(self):
         
         hp_bar= ""
